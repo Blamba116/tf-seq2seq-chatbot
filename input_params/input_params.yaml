@@ -1,0 +1,68 @@
+MODEL_1:
+    READ_DATA_PARAMS:
+        SENT_LEN: 100
+        KIND: 'last_sentence'
+    VOCAB_PARAMS:
+        MAX_LEN: 10
+        MIN_LEN: 3
+        NUM_WORDS: 10000
+    MODEL_PARAMS:
+        BATCH_SIZE: 64
+        DROP_PROB: 0.1
+        EMBEDDING_DIMS: 256
+        RNN_UNITS: 1024
+        ATTENTION_UNITS: 200
+        IF_USE_ATTENTION: True
+        TRAINABLE_EMBEDDING: True
+        ENCODER_CONFIG: ['encoder_rnnlayer_1']
+        DECODER_CONFIG: ['decoder_rnnlayer_1']
+    TRAIN_PARAMS:
+        EPOCHS: 10
+        EVAL_FREQ: 1
+        SAVE_PATH: 'saved_model/model_1/'
+        
+MODEL_2:
+    READ_DATA_PARAMS:
+        SENT_LEN: 20
+        KIND: 'fast'
+    VOCAB_PARAMS:
+        MAX_LEN: 10
+        MIN_LEN: 3
+        NUM_WORDS: 10000
+    MODEL_PARAMS:
+        BATCH_SIZE: 64
+        DROP_PROB: 0.1
+        EMBEDDING_DIMS: 256
+        RNN_UNITS: 1024
+        ATTENTION_UNITS: 200
+        IF_USE_ATTENTION: True
+        TRAINABLE_EMBEDDING: True
+        ENCODER_CONFIG: ['encoder_rnnlayer_1']
+        DECODER_CONFIG: ['decoder_rnnlayer_1']
+    TRAIN_PARAMS:
+        EPOCHS: 10
+        EVAL_FREQ: 1
+        SAVE_PATH: 'saved_model/model_2/'
+        
+MODEL_3:
+    READ_DATA_PARAMS:
+        SENT_LEN: 20
+        KIND: 'fast'
+    VOCAB_PARAMS:
+        MAX_LEN: 10
+        MIN_LEN: 3
+        NUM_WORDS: 10000
+    MODEL_PARAMS:
+        BATCH_SIZE: 64
+        DROP_PROB: 0.1
+        EMBEDDING_DIMS: 64
+        RNN_UNITS: 128
+        ATTENTION_UNITS: 32
+        IF_USE_ATTENTION: True
+        TRAINABLE_EMBEDDING: True
+        ENCODER_CONFIG: ['encoder_rnnlayer_1']
+        DECODER_CONFIG: ['decoder_rnnlayer_1']
+    TRAIN_PARAMS:
+        EPOCHS: 10
+        EVAL_FREQ: 1
+        SAVE_PATH: 'saved_model/model_3/'
