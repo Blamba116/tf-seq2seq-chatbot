@@ -1,3 +1,4 @@
+# model with attention
 MODEL_1:
     READ_DATA_PARAMS:
         SENT_LEN: 100
@@ -20,7 +21,8 @@ MODEL_1:
         EPOCHS: 10
         EVAL_FREQ: 1
         SAVE_PATH: 'saved_model/model_1/'
-        
+
+# model with attention
 MODEL_2:
     READ_DATA_PARAMS:
         SENT_LEN: 20
@@ -43,7 +45,8 @@ MODEL_2:
         EPOCHS: 10
         EVAL_FREQ: 1
         SAVE_PATH: 'saved_model/model_2/'
-        
+
+# model with attention
 MODEL_3:
     READ_DATA_PARAMS:
         SENT_LEN: 20
@@ -66,3 +69,75 @@ MODEL_3:
         EPOCHS: 10
         EVAL_FREQ: 1
         SAVE_PATH: 'saved_model/model_3/'
+        
+# model without attention
+MODEL_4:
+    READ_DATA_PARAMS:
+        SENT_LEN: 100
+        KIND: 'last_sentence'
+    VOCAB_PARAMS:
+        MAX_LEN: 10
+        MIN_LEN: 3
+        NUM_WORDS: 20000
+    MODEL_PARAMS:
+        BATCH_SIZE: 256
+        DROP_PROB: 0.3
+        EMBEDDING_DIMS: 64
+        RNN_UNITS: 512
+        ATTENTION_UNITS: None
+        IF_USE_ATTENTION: False
+        TRAINABLE_EMBEDDING: True
+        ENCODER_CONFIG: ['encoder_rnnlayer_1']
+        DECODER_CONFIG: ['decoder_rnnlayer_1']
+    TRAIN_PARAMS:
+        EPOCHS: 30
+        EVAL_FREQ: 1
+        SAVE_PATH: 'saved_model/model_4/'
+        
+# model without attention
+MODEL_5:
+    READ_DATA_PARAMS:
+        SENT_LEN: 100
+        KIND: 'last_sentence'
+    VOCAB_PARAMS:
+        MAX_LEN: 10
+        MIN_LEN: 3
+        NUM_WORDS: 20000
+    MODEL_PARAMS:
+        BATCH_SIZE: 128
+        DROP_PROB: 0.3
+        EMBEDDING_DIMS: 64
+        RNN_UNITS: 512
+        ATTENTION_UNITS: None
+        IF_USE_ATTENTION: False
+        TRAINABLE_EMBEDDING: True
+        ENCODER_CONFIG: ['encoder_rnnlayer_1']
+        DECODER_CONFIG: ['decoder_rnnlayer_1']
+    TRAIN_PARAMS:
+        EPOCHS: 30
+        EVAL_FREQ: 1
+        SAVE_PATH: 'saved_model/model_5/'
+        
+# model without attention
+MODEL_6:
+    READ_DATA_PARAMS:
+        SENT_LEN: 100
+        KIND: 'last_sentence'
+    VOCAB_PARAMS:
+        MAX_LEN: 10
+        MIN_LEN: 3
+        NUM_WORDS: 20000
+    MODEL_PARAMS:
+        BATCH_SIZE: 128
+        DROP_PROB: 0.3
+        EMBEDDING_DIMS: 64
+        RNN_UNITS: 512
+        ATTENTION_UNITS: None
+        IF_USE_ATTENTION: False
+        TRAINABLE_EMBEDDING: True
+        ENCODER_CONFIG: ['encoder_rnnlayer_1']
+        DECODER_CONFIG: ['decoder_rnnlayer_1']
+    TRAIN_PARAMS:
+        EPOCHS: 30
+        EVAL_FREQ: 1
+        SAVE_PATH: 'saved_model/model_5/'

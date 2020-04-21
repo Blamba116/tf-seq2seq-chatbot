@@ -13,11 +13,12 @@
 # limitations under the License.
 # ==============================================================================
 
-import ast
+# except for some changes, the code is taken from the Conchylicultor project
+# extractText function changed
+
 import os
-import random
 import re
-from time import time
+import ast
 
 import nltk
 from tqdm import tqdm
@@ -107,6 +108,7 @@ class CornellData:
 
     def getConversations(self):
         return self.conversations
+    
 
 def extractText(line, kind='fast', text='request'):
     if kind == 'fast':
