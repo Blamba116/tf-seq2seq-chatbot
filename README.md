@@ -5,29 +5,29 @@
 This is a end-to-end implementation of chatbot based on deep RNN with LSTM cells. Chatbot is trained on Cornell Movie-Dialogs Corpus.
 
 Model parameters are set in input_params.yaml:
-	<MODEL_NAME>:
-		READ_DATA_PARAMS:
-			SENT_LEN: maximum sentence lenths
-			KIND: preprocessing type
-		VOCAB_PARAMS:
-			MAX_LEN: maximum sequence lenths
-			MIN_LEN: maximum sequence lenths
-			NUM_WORDS: number of words in vocabulary
-		MODEL_PARAMS:
-			BATCH_SIZE: batch size
-			DROP_PROB: dropout probability (1 - keep_prob)
-			EMBEDDING_DIMS: embedding dimension
-			RNN_UNITS: number of rnn hidden units
-			ATTENTION_UNITS: number of attention hidden units
-			IF_USE_ATTENTION: enables attention mechanism
-			TRAINABLE_EMBEDDING: allows model to train embedding layer
-			ENCODER_CONFIG: list of encoder layers
-			DECODER_CONFIG: list of decoder layers
-		TRAIN_PARAMS:
-			EPOCHS: number of epochs
-			EVAL_FREQ: validation frequency
-			SAVE_PATH: directory for storing weights
-			
+- <MODEL_NAME>:
+	- READ_DATA_PARAMS:
+		- SENT_LEN: maximum sentence lenths
+		- KIND: preprocessing type
+	- VOCAB_PARAMS:
+		- MAX_LEN: maximum sequence lenths
+		- MIN_LEN: maximum sequence lenths
+		- NUM_WORDS: number of words in vocabulary
+	- MODEL_PARAMS:
+		- BATCH_SIZE: batch size
+		- DROP_PROB: dropout probability (1 - keep_prob)
+		- EMBEDDING_DIMS: embedding dimension
+		- RNN_UNITS: number of rnn hidden units
+		- ATTENTION_UNITS: number of attention hidden units
+		- IF_USE_ATTENTION: enables attention mechanism
+		- TRAINABLE_EMBEDDING: allows model to train embedding layer
+		- ENCODER_CONFIG: list of encoder layers
+		- DECODER_CONFIG: list of decoder layers
+	- TRAIN_PARAMS:
+		- EPOCHS: number of epochs
+		- EVAL_FREQ: validation frequency
+		- SAVE_PATH: directory for storing weights
+		
 ### Installation
 
 To install all packages simply run
@@ -37,12 +37,12 @@ pip install -U -r requirements.txt
 ```
 
 Requirements are
-	* tensorflow==2.1.0
-	* numpy==1.18.2
-	* PyYAML==5.3.1
-	* scikit-learn==0.22.2.post1
-	* nltk==3.4.5
-	* tqdm==4.44.0
+* tensorflow==2.1.0
+* numpy==1.18.2
+* PyYAML==5.3.1
+* scikit-learn==0.22.2.post1
+* nltk==3.4.5
+* tqdm==4.44.0
 	
 Run build_dependencies.py to download training corpus.
 
@@ -74,8 +74,8 @@ python telegram_bot.py <MODEL_NAME> --token <telegram token>
 
 To create telegram bot:
 
-	1. start chat with @BotFather
-	2. type /newbot
-	3. set chatbot name and username
-	4. use <telegram token> (HTTP API token) to access chatbot
+1. start chat with @BotFather
+2. type /newbot
+3. set chatbot name and username
+4. use <telegram token> (HTTP API token) to access chatbot
 
