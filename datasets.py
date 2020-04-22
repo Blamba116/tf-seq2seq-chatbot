@@ -23,6 +23,8 @@ import ast
 import nltk
 from tqdm import tqdm
 
+nltk.download('punkt')
+
 """
 Load the cornell movie dialog corpus.
 
