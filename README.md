@@ -2,9 +2,11 @@
 
 ### Descriprion
 
-This is a end-to-end implementation of chatbot based on deep RNN with LSTM cells. Chatbot is trained on Cornell Movie-Dialogs Corpus.
+This is a straightforward end-to-end implementation of chatbot based on deep RNN with LSTM cells. Chatbot is trained on Cornell Movie-Dialogs Corpus. The idea of this project (and some scripts) is base on [HSE NLP Coursera course](https://www.coursera.org/learn/language-processing) honor assignment.
 
-Model parameters are set in input_params.yaml:
+### Model parameters
+
+Config file input_params.yaml has the following structure:
 - <MODEL_NAME>:
 	- READ_DATA_PARAMS:
 		- SENT_LEN: maximum sentence lenths
@@ -27,7 +29,7 @@ Model parameters are set in input_params.yaml:
 		- EPOCHS: number of epochs
 		- EVAL_FREQ: validation frequency
 		- SAVE_PATH: directory for storing weights
-		
+	
 ### Installation
 
 To install all packages simply run
