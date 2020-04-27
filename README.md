@@ -2,7 +2,7 @@
 
 ### Descriprion
 
-This is a straightforward end-to-end implementation of chatbot based on deep RNN with LSTM cells. Chatbot is trained on Cornell Movie-Dialogs Corpus. The idea of this project (and some scripts) is base on [HSE NLP Coursera course](https://www.coursera.org/learn/language-processing) honor assignment.
+This is a straightforward end-to-end implementation of chatbot based on deep RNN with LSTM cells. Chatbot is trained on Cornell Movie-Dialogs Corpus. The idea of this project (and some scripts) is based on [HSE NLP Coursera course](https://www.coursera.org/learn/language-processing) honor assignment.
 
 ### Model parameters
 
